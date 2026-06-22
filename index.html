@@ -1,0 +1,81 @@
+﻿<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Design Thinking Sprint</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <p class="eyebrow">Interaktives Seminar-Tool</p>
+      <h1>Design Thinking Sprint</h1>
+    </div>
+    <div class="session-meta">
+      <label>
+        Thema
+        <input id="topicInput" type="text" placeholder="z.B. neuer Service, Produktidee, Geschaeftsmodell">
+      </label>
+      <label>
+        Team
+        <input id="teamInput" type="text" placeholder="z.B. Team A">
+      </label>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <aside class="phase-nav" aria-label="Phasen">
+      <div class="progress-wrap">
+        <div class="progress-label">
+          <span>Fortschritt</span>
+          <strong id="progressText">0%</strong>
+        </div>
+        <div class="progress-track"><div id="progressBar"></div></div>
+      </div>
+      <nav id="phaseList"></nav>
+    </aside>
+
+    <section class="workspace">
+      <div class="phase-header">
+        <div>
+          <p id="phaseKicker" class="eyebrow">Phase</p>
+          <h2 id="phaseTitle"></h2>
+          <p id="phasePurpose" class="purpose"></p>
+        </div>
+        <div class="timer-card">
+          <span id="phaseTime">00 Min.</span>
+          <button id="timerBtn" type="button">Timer starten</button>
+        </div>
+      </div>
+
+      <div class="prompt-panel">
+        <h3>Aufgabe</h3>
+        <p id="phasePrompt"></p>
+      </div>
+
+      <form id="phaseForm" class="activity-grid"></form>
+
+      <div class="actions">
+        <button id="prevBtn" type="button" class="secondary">Zurueck</button>
+        <button id="completeBtn" type="button">Phase abschliessen</button>
+        <button id="nextBtn" type="button">Weiter</button>
+      </div>
+    </section>
+
+    <aside class="takeaway">
+      <div class="takeaway-head">
+        <div>
+          <p class="eyebrow">Live-Ergebnis</p>
+          <h2>Team-Canvas</h2>
+        </div>
+        <button id="copyBtn" type="button" class="secondary">Kopieren</button>
+      </div>
+      <div id="summary" class="summary"></div>
+      <button id="downloadBtn" type="button" class="download">Ergebnis herunterladen</button>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
